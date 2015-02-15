@@ -8,5 +8,5 @@
 |   Amir Maurice   |
 |   Dalia Hossam   |
 |Ahmad Abdalraheem |
-|                  |
+|   Maggie Moheb   |
 |                  |
