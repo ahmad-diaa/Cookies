@@ -5,7 +5,7 @@
 |------------------------|
 |      Ahmed Diaa        |
 |     Youmna Salah       |
-|     Amir Mauricee      |
+|     Amir Maurice       |
 |    Dalia Hossam   	 |
 |   Ahmad Abdalraheem    |
 |     Maggie Moheb       |
