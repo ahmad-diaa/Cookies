@@ -1,4 +1,4 @@
-![alt text](https://akaicherryportfolio.files.wordpress.com/2012/02/logo_6_ccc.png)
+![alt text](file:///C:/Users/Aboudy/Cookies.git/Cookies/logo.png)
 
 *We Track Your Needs*
 
