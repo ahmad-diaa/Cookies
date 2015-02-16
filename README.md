@@ -5,6 +5,7 @@
 
 ##### Our mission is to ensure customer's satisfaction through providing superior quality innovative products.
 
+
 |        Founders        |
 |------------------------|
 |      Ahmed Diaa        |
@@ -14,3 +15,9 @@
 |   Ahmad Abdalraheem    |
 |     Maggie Moheb       |
 |  Abdelrahman Elzamzamy |
+
+#SmartX
+
+#####Our project is about enhancing our everyday-use devices with technology to facilitate their usage and making it more fun. We will use our mobile phones to control the domicile devices. Our project is divided into 2 sections:
+1. A mobile application in order to control our home devices
+2. A website to advertise for our products
