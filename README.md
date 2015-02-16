@@ -16,8 +16,6 @@
 |     Maggie Moheb       |
 |  Abdelrahman Elzamzamy |
 
-#SmartX
+#Our Website
 
-#####Our project is about enhancing our everyday-use devices with technology to facilitate their usage and making it more fun. We will use our mobile phones to control the domicile devices. Our project is divided into 2 sections:
-1. A mobile application in order to control our home devices
-2. A website to advertise for our products
+#####We use this website to introduce our company and ourselves to our customers. Through this website, our customers can get all the information they need about the company's vision and general information. Also, they can know about us, the founders, through our profiles. They can also post articles through our blog in which we and our customers can share our experience and suggestions. 
