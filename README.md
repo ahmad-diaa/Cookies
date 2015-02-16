@@ -4,7 +4,7 @@
 
 ##### Our mission is to ensure customer's satisfaction through providing superior quality innovative products.
 
-|          Name          |
+|        Founders        |
 |------------------------|
 |      Ahmed Diaa        |
 |     Youmna Salah       |
