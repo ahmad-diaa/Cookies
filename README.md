@@ -18,4 +18,4 @@
 
 #Our Website
 
-#####We use this website to introduce our company and ourselves to our customers. Through this website, our customers can get all the information they need about the company's vision and general information. Also, they can know about us, the founders, through our profiles. They can also post articles through our blog in which we and our customers can share our experience and suggestions. 
+#####We use this website to introduce our company and ourselves to our customers. Through this website, our customers can get all the information they need about the company's vision and general information. Also, they can know about us, the founders, through our profiles and through our blog in which we and our customers can share our experience and suggestions. 
