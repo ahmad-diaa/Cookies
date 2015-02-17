@@ -25,12 +25,22 @@
  	width: 500px;
  	height: 500px;
  }
- 
+ #box5{
+ 	position: absolute;
+ 	padding-bottom: 30px;
+ 	padding-left: 20px;
+ 	width: 500px;
+ 	padding-right: 20px;
+ 	padding-top: 30px;
+ 	vertical-align: middle;
+ 	background-image: url("http://www.oursweetplace.com/wp-content/uploads/2014/04/aqua-damask.jpg");
+
+ }
 
  p{
- 	position: absolute;
+ 	
  	max-width: 500px;
- 	padding-left: 300px;
+ 	padding-left: 450px;
  	text-align: center;
  }
  h4{

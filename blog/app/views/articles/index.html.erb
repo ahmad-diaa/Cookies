@@ -2,20 +2,21 @@
 <h1>Welcome to Cookies Blog!!</h1>
 
 <h2>Listing Articles</h2>
- 
 
   <% @articles.each do |article| %>
-  <div>
+  	
+ 	<div id=box<%= article.id -%>
       <h4><%= article.title %></h4>
       <p><%= article.text %></p> 
-
+      <p>box<%= article.id %></p>
       <h4><%= link_to 'Comment', article_path(article) %> |<%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></h4>
 
-     </div>        
-     
-  <% end %>
+    </div>
+  
+  
+ <% end -%>
 
 <h3><%= link_to 'Share you experience with us!', new_article_path %></h3>
 
