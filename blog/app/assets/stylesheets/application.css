@@ -14,42 +14,83 @@
  *= require_self
  */
  html{
- 	background: #94DBFF;
- 	text-align: center;
- 	background-image: url("http://www.oursweetplace.com/wp-content/uploads/2014/04/aqua-damask.jpg");
+ 	background: #EEEEEE;
+ 	background-image: url("http://st.depositphotos.com/2200898/2794/v/950/depositphotos_27946387-Classic-wallpaper-seamless-vintage-flower-pattern-background.jpg");
+ 	opacity: 0.8;
  	font-family: fantasy;
-
+ 	vertical-align: center;
+ 	padding-left: 30px;
+ 	
+ 	
  }
- 
+ h1{
+ 	
+ 	font-family: cursive;
+ 	background: #EEEEEE;
+ 	visibility: visible;
+   background: -webkit-linear-gradient(white, gray); 
+  	 -webkit-animation: fadein 2s;
+  	
+ }
  textarea{
  	width: 500px;
  	height: 500px;
+ 	
  }
- #box5{
- 	position: absolute;
- 	padding-bottom: 30px;
- 	padding-left: 20px;
- 	width: 500px;
- 	padding-right: 20px;
- 	padding-top: 30px;
- 	vertical-align: middle;
- 	background-image: url("http://www.oursweetplace.com/wp-content/uploads/2014/04/aqua-damask.jpg");
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadeinn {
+    from { opacity: 0.9; }
+    to   { opacity: 1; }
+}
 
+ #box{
+ 	padding: 30px;
+ 	width: 340px;
+ 	text-align: center;
+ 	margin: 5px;
+ 	background-color: #DDDDFF;
+ 	opacity: 0.9;
+ 	filter: alpha(opacity=100);
+ 	background-position: center;
+ 	background-size: contain;
+ 	background-repeat: no-repeat;
+ 	text-decoration: blink;
+ 	float: left;
+ 	border-radius: 15%;
+ 	box-shadow: 10px 10px 10px 10px #ccc;
+ }
+ #box:hover{
+ 	padding: 20px;
+ 	width: 340px;
+ 	text-align: center;
+ 	margin: 5px;
+ 	background-color: #EEEEFF;
+ 	opacity: 1;
+ 	filter: alpha(opacity=100);
+ 	background-position: center;
+ 	background-size: contain;
+ 	background-repeat: no-repeat;
+ 	text-decoration: blink;
+ 	float: left;
+ 	 -webkit-animation: fadeinn 2s;
  }
 
  p{
  	
- 	max-width: 500px;
- 	padding-left: 450px;
- 	text-align: center;
+ 	
+ 	opacity: 1;
+ 	width: 50%;
+ 	vertical-align: middle;
  }
  h4{
- 	border-right: 500px;
+ 	font-size: 15px;
+ 	font-weight: 900;
  	
- 	max-width: 500px;
- 	padding-left: 450px;
- 	text-align: center;
  }
+
  button{
  	vertical-align: center;
  }
