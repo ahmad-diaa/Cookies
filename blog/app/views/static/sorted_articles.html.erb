@@ -2,12 +2,12 @@
 <h1>Welcome to Cookies Blog!!</h1>
 
 <h2>Listing Articles</h2>
- 
       <div>
-  	<%= link_to 'List by Category', static_sorted_articles_path %>
-  	</div>
-
-  <% @articles.each do |article| %>
+ 
+  <div>
+    <%= link_to 'Home', articles_path %>
+    </div>
+  <% Article.all.order(:category_id).each do |article| %>
   	
  	<div id='box'>
 

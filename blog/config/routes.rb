@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'static/sorted_articles'
+
   #resources :root do
     root 'welcome#index'
   
   resources :articles do
    resources :comments
   end
+  get "/:page" => "static#show"
   #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
