@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
   get 'static/sorted_articles'
+get 'cookies/show'
 
-  #resources :root do
-    root 'welcome#index'
-  
+  get 'signup/show'
+  get 'signup/login'
+  post 'signup' => 'signup#signup'
+    get 'signup'  => 'users#new'
+      get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+resources :users
+    root 'cookies#show'
   resources :articles do
    resources :comments
   end
+  #resources :root do
+
+  
+ 
   get "/:page" => "static#show"
   #get 'welcome/index'
 
