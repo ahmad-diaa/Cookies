@@ -1,4 +1,40 @@
-<h1>New Article</h1>
+<!-- <h2>Listing Articles</h2> -->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+
+<style>
+      body {
+        font-family: 'Cuprum';
+        font-size: 48px;
+      }
+    </style>
+
+
+  <meta charset="utf-8"> </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> </link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<div class ="container">
+ 
+
+  <ul  class="nav nav-tabs" role="tablist">
+    <li><a href="#">Take A Tour</a></li>
+    <li><%= link_to 'Blog', articles_path %> </li>
+    <li><a href="#">The Team</a></li>
+    <li><a href="#">About Us </a></li>
+
+  </ul>
+ <img src="https://lh3.googleusercontent.com/tnEOzHiuBnq63J10PDZk92xquQNrJfl1wj5XafwzSZV12H8rXamDdJJ6dJvqL4pSqaKh5yblV0I=w1342-h480" width="150px" style="position:center; margin-left:1000px;" >
+
+</div>
+
+<h1 align="center"> <font color="white" size ="10" face="Sans-serif">New Article</font> </h1>
 <%= render 'form' %>
 
 <%= link_to 'Back', articles_path %>
+</body>
