@@ -1,3 +1,13 @@
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+
+<style>
+      html {
+        font-family: 'Cuprum';
+        font-size: 48px;
+      }
+    </style>
+</head>
 <%= form_for @article do |f| %>
  
   <% if @article.errors.any? %>
@@ -13,20 +23,20 @@
       </ul>
     </div>
   <% end %>
- 
- <p>
-    <%= f.label :title %><br>
+ <p> 
+     <%= f.label :title %>  <br>
     <%= f.text_field :title %>
   </p>
- 
+ <br>
   <p>
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </p>
+</font>
  <%= f.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @article.category_id }, { class: 'form-control' }) %>
 
   <p>
     <%= f.submit %>
   </p>
  
-<% end %>
+<% end %> 
