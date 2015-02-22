@@ -9,10 +9,6 @@ get 'cookies/show'
       get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  get 'users/edit'
-  get 'users/edit/:id', to: 'users#edit'
-  post 'users/edit/:id', to: 'users#edit'
-  patch 'users/edit/:id', to:'users#edit'
 resources :users
     root 'cookies#show'
   resources :articles do
