@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-require 'bcrypt'
   def new
 
   end
