@@ -8,15 +8,20 @@
 <div class="container">
 
   <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">My Profile</a></li>
+    <li class="active"><a href="#">Profile</a></li>
     <li><a href="#">Blog</a></li>
     <li><a href="#">The Team</a></li>
     <li><a href="#">About Us</a></li>
   </ul>
 </div>
 <div class="container" style="position:fixed;left:600px;top:300px;">
-<font face="Papyrus" size="+1000">Hi, <%=@user.name%> :)</font></div>
+<font face="Papyrus" size="+1000" color="lightblue" >Hi, <%=@user.name%> :)</font></div>
+<div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images">
+ <button type="button" class="btn btn-success btn-lg">Edit profile picture</button></a>  
+
+ <button type="button" class="btn btn-success btn-lg">Edit signature</button> </div>
+
+<div></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
