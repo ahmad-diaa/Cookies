@@ -1,12 +1,48 @@
-<html>
-<h1>Welcome to Cookies Blog!!</h1>
 
-<h2>Listing Articles</h2>
-      <div>
+<!-- <h2>Listing Articles</h2> -->
+<head>
+  <meta charset="utf-8"> </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> </link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+<div class="container">
+
+  <ul  class="nav nav-tabs" role="tablist">
+    <li><a href="#">Take A Tour</a></li>
+    <li><%= link_to 'Blog', articles_path %> </li>
+    <li><a href="#">The Team</a></li>
+    <li><a href="#">About Us</a></li>
+  </ul>
+</div>
+
+<div class ="container">
+  <img src="https://lh3.googleusercontent.com/tnEOzHiuBnq63J10PDZk92xquQNrJfl1wj5XafwzSZV12H8rXamDdJJ6dJvqL4pSqaKh5yblV0I=w1342-h480" width="700px" style="position:center; margin-left:220px;" >
+
+</div>
+
+ <div  class="container" style="position:fixed; left:520px; top:400px;">
+
+
+     <a href ="/articles">
+  <button type="button" class="btn btn-primary btn-lg">Go Back</button> </a>
+
+</div>
+
+</div>
+<div class="container" style="position:fixed; left:700px; top:400px; " >
+
+     <a href ="/articles/new">
+
+ <button type="button" class="btn btn-success btn-lg">New Post</button></a>
+
+</div>
+
+
  
-  <div>
-    <%= link_to 'Home', articles_path %>
-    </div>
   <% Article.all.order(:category_id).each do |article| %>
   	
  	<div id='box'>
@@ -22,8 +58,6 @@
 
  <% end -%>
 
-<div id='box'>
-<h3><%= link_to 'Share you experience with us!', new_article_path %></h3>
-</div>
+
 
 </html>
