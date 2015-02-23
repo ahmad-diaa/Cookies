@@ -7,21 +7,24 @@
 <body>
 <div class="container">
 
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="#">Profile</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">The Team</a></li>
-    <li><a href="#">About Us</a></li>
+ <ul class="nav nav-tabs" role="tablist">
+        <li><a href="#">Take A Tour</a></li>
+
+ <li class="active"><a href="#">My Profile</a></li>
+    <li><%= link_to 'Blog' , articles_path %></li>
+<li><%= link_to 'About Us', aboutus_intro_path %></li>
   </ul>
+    <li><%= link_to 'Edit signature', edit_user_path(@user.id) %></li>
+   </ul>
+
 </div>
 <div class="container" style="position:fixed;left:600px;top:300px;">
 <font face="Papyrus" size="+1000" color="lightblue" >Hi, <%=@user.name%> :)</font></div>
-<div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images">
+
+
+<div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images/edit">
  <button type="button" class="btn btn-success btn-lg">Edit profile picture</button></a>  
-
- <button type="button" class="btn btn-success btn-lg">Edit signature</button> </div>
-
-<div></div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>

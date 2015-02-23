@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'static/sorted_articles'
 get 'cookies/show'
+  get 'aboutus/intro'
+
 resources :carrierwave_images
 
   get 'signup/show'

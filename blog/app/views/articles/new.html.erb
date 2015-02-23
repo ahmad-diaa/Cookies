@@ -22,19 +22,77 @@
 <div class ="container">
  
 
-  <ul  class="nav nav-tabs" role="tablist">
-    <li><a href="#">Take A Tour</a></li>
-    <li><%= link_to 'Blog', articles_path %> </li>
-    <li><a href="#">The Team</a></li>
-    <li><a href="#">About Us </a></li>
+    <ul class="nav nav-tabs" role="tablist">
+        <li><a href="#">Take A Tour</a></li>
+
+    <li><a href="#">My Profile</a></li>
+    <li><%= link_to 'Blog' , articles_path %></li>
+<li><%= link_to 'About Us', aboutus_intro_path %></li>
 
   </ul>
+
  <img src="/images/logo_6_ccc.png" width="150px" style="position:center; margin-left:1000px;" >
 
 </div>
 
-<h1 align="center"> <font color="white" size ="10" face="Sans-serif">New Article</font> </h1>
-<%= render 'form' %>
+<h1 align="center"> <font color="yellow" size ="50" face="Sans-serif">New Article</font> </h1>
 
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    theme: "modern",
+    plugins: [
+        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons template paste textcolor"
+    ],
+    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fontsizeselect",
+    toolbar2: "preview media | forecolor backcolor emoticons",
+    image_advtab: true,
+    theme_advanced_font_sizes: "10px,12px,13px,14px,16px,18px,20px",
+    font_size_style_values: "12px,13px,14px,16px,18px,20px",
+});
+</script>
+<%= form_for :article, url: articles_path do |f| %> 
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <h3><font color="yellow" face="sans-serif">
+    <%= f.label :title %><br></font>
+  <font color="black" face="sans-serif"><%= f.text_field :title %>
+  </font></h3>
+ 
+  <h3><font color="yellow">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </h3>
+ <%= f.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @article.category_id }, { class: 'form-control' }) %>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
 <%= link_to 'Back', articles_path %>
 </body>

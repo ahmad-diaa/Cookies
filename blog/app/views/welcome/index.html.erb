@@ -1,2 +1,10 @@
-<h1>Hello, Rails!</h1>
+<div class="container">
+
+<ul  class="nav nav-tabs" role="tablist">
+    <li><a href="#">Take A Tour</a></li>
+    <li><%= link_to 'Blog', articles_path %> </li>
+        <li><a href="#">My Profile</a></li>
+
+ <li><%= link_to 'About Us', aboutus_intro_path %></li>  </ul>
+</div>
 <%= link_to 'My Blog', controller: 'articles' %>

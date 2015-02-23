@@ -8,26 +8,24 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
 </head>
-<body>
+<body id ="ground">
 <div class="container">
 
-  <ul  class="nav nav-tabs" role="tablist">
-    <li><a href="#">Take A Tour</a></li>
-    <li><%= link_to 'Blog', articles_path %> </li>
-    <li><a href="#">The Team</a></li>
-    <li><a href="#">About Us</a></li>
+  <ul class="nav nav-tabs" role="tablist">
+   <li><a href="#">Take A Tour</a></li>
+    <li class="active"><a href="#">My Profile</a></li>
+    <li><%= link_to 'Blog' , articles_path %></li>
+    
+<li><%= link_to 'About Us', aboutus_intro_path %></li>
     <li><a href="users\edit">Change Signature</a></li>
   </ul>
 </div>
 
 <div class ="container">
   <img src="/images/logo_6_ccc.png" width="700px" style="position:center; margin-left:220px;" >
-
 </div>
 
-
-
-<div  class="container" style="position:fixed; left:520px; top:400px;">
+<div >
 
 
      <a href ="/static/sorted_articles">
@@ -35,29 +33,26 @@
 
 </div>
 
-</div>
-<div class="container" style="position:fixed; left:700px; top:400px; " >
+<div>
 
      <a href ="articles/new">
 
  <button type="button" class="btn btn-success btn-lg">New Post</button></a>
-
-</div>
-
+  </div>
 
   <% @articles.each do |article| %>
-  	
-<div id = "box"class="container" style="position:fixed; left:700px; top:400px;">
+    
+  <div id ="box" >
 
       <h4><%= article.title %></h4>
-      <p><%= article.text %></p> 
        <p>Category : <%= Category.find(article.category_id).name %></p> 
-      <h4><%= link_to 'Comment', article_path(article) %> |<%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
+      <h4><%= link_to 'Show', article_path(article) %> |<%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></h4>
 
     </div>
 
- <% end -%>
+ <% end %>
+</body>
 
-</html>
+

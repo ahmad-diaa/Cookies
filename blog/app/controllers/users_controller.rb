@@ -23,7 +23,7 @@ end
 
   def edit
  @user = User.find(params[:id])
-      @user.signature = params[:text1]
+     
       @user.save
   end
 

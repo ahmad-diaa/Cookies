@@ -1,17 +1,67 @@
-<p>
-  <h2><%= @article.title %></h2>
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cuprum' rel='stylesheet' type='text/css'>
+
+<style>
+      body {
+        font-family: 'Cuprum';
+        font-size: 48px;
+      }
+    </style>
+
+
+  <meta charset="utf-8"> </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> </link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
-</p>
+</head>
+<body>
+
+<div class ="container">
  
+
+  <ul  class="nav nav-tabs" role="tablist">
+    <li><a href="#">Take A Tour</a></li>
+    <li><%= link_to 'Blog', articles_path %> </li>
+    <li><a href="#">The Team</a></li>
+    <li><a href="#">About Us </a></li>
+
+  </ul>
+ <img src="/images/logo_6_ccc.png" width="150px" style="position:center; margin-left:1000px;" >
+
+</div>
+
+<div class="showpost">
 <p>
-  
-  <%= @article.text %>
+  <h2><font color="DodgerBlue"><%= @article.title %></font></h2>
+</p>
+<p>
+<%= render inline:@article.text %>
+</p>
+</div>
+<div class="show comments">
+<p>
+
+<%= render @article.comments %>
 </p>
 
-<h3>Comments</h3>
-<%= render @article.comments %>
-
-<h4>Add a comment:</h4>
 <%= render 'comments/form' %>
-
+</div>
 <h4><%= link_to 'Back', articles_path %> | <%= link_to 'Edit', edit_article_path(@article) %></h4>
+
+<!--SideBar Floating Share Buttons Code Start--><br /> <br /> <style>  #pageshare {position:fixed; bottom:15%; right:10px; float:left; border: 1px solid black; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#eff3fa;padding:0 0 2px  0;z-index:10;}  #pageshare .sbutton {float:left;clear:both;margin:5px 5px 0 5px;}  .fb_share_count_top {width:48px !important;}  .fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}  .FBConnectButton_Small, .FBConnectButton_RTL_Small {width:49px !important; -moz-border-radius:3px;-webkit-border-radius:3px;}  .FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}  </style><br /> <div id='pageshare' title="Tell Your Friends About This">
+<div class='sbutton' id='gb'>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like layout="box_count" show_faces="false" font=""></fb:like></div>
+
+<div class='sbutton' id='gplusone'>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><g:plusone size="tall"></g:plusone></div>
+<div class='sbutton' id='fb'>
+<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script></div>
+<br/><div style="clear: both;font-size: 9px;text-align:center;">
+<a href="http://atoz-networking.blogspot.com/2012/07/add-floating-share-buttons-to-your-blog.html" target="blank"><font color="black">[Get This]<font></font></font></a></div>
+</div>
+<br /> <!--SideBar Floating Share Buttons Code End-->   
+
+</body>
