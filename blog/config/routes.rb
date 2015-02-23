@@ -4,6 +4,10 @@ get 'cookies/show'
   get 'aboutus/intro'
 
 resources :carrierwave_images
+get 'users/edit'
+  get 'carrierwave_images/:id/edit' ,  to: 'carrierwave_images#edit'
+  post 'carrierwave_images/:id/edit' , to: 'carrierwave_images#edit'
+  patch 'carrierwave_images/:id/edit', to:'carrierwave_images#edit'
 
   get 'signup/show'
   get 'signup/login'

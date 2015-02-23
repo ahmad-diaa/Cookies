@@ -10,8 +10,9 @@ class UsersController < ApplicationController
 
 def create
     @user = User.new(user_params)
-    
     if @user.save
+          # @carrierwaveimages = CarrierwaveImage new("no_user_profile-pic.jpg")
+
     	  log_in @user
     	  flash[:success] = "Welcome ^.^ !"
         redirect_to @user

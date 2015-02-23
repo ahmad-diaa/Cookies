@@ -8,22 +8,22 @@
 <div class="container">
 
  <ul class="nav nav-tabs" role="tablist">
-        <li><a href="#">Take A Tour</a></li>
 
- <li class="active"><a href="#">My Profile</a></li>
+ <li class="active"><a href="#">Home</a></li>
     <li><%= link_to 'Blog' , articles_path %></li>
 <li><%= link_to 'About Us', aboutus_intro_path %></li>
-  </ul>
     <li><%= link_to 'Edit signature', edit_user_path(@user.id) %></li>
+<li><%= link_to "Edit profile picture", {:controller => "carrierwave_images", :action => "edit", :@carrierwave_images => @user.id }%></li>
    </ul>
 
-</div>
+</div>when i insert into a one table i make change in another table how
 <div class="container" style="position:fixed;left:600px;top:300px;">
 <font face="Papyrus" size="+1000" color="lightblue" >Hi, <%=@user.name%> :)</font></div>
 
 
-<div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images/edit">
- <button type="button" class="btn btn-success btn-lg">Edit profile picture</button></a>  
+<div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images/"@user.id"/edit">
+	
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
