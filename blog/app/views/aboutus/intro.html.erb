@@ -25,8 +25,8 @@ div.transbox p {
   <ul class="nav nav-tabs" role="tablist">
 
     <li><a href="#">Home</a></li>
-    <li><%= link_to 'Blog' , articles_path %></li>
-<li><%= link_to 'About Us', aboutus_intro_path %></li>
+    <li><%= link_to 'Blog' , user_articles_path %></li>
+<li class="active"><%= link_to 'About Us', user_aboutus_intro_path %></li>
   </ul>
 </div>
 <div class ="container">
@@ -38,13 +38,6 @@ div.transbox p {
 
 </div>
 </head>
-
-
-
-
-
-
-
 
 
 <body>
@@ -84,21 +77,21 @@ div.transbox p {
 				<div class="ch-info-front ch-img-1"></div>
 				<div class="ch-info-back">
 					<h3>Ahmed Diaa</h3>
-					<p>Scrum master<a href="">View Biography</a></p>
+					<p>Scrum Master <%=link_to 'View Biography', user_aboutus_diaa_path%></p>
 				</div>	
 			</div>
 		</div>
 	</div>
 </li>
 	
-	<<li>
+	<li>
 	<div class="ch-item ch-img-2">				
 		<div class="ch-info-wrap2">
 			<div class="ch-info">
 				<div class="ch-info-front ch-img-2"></div>
 				<div class="ch-info-back">
 					<h3>Maggie Moheb</h3>
-					<p>Founder<a href="">View Biography</a></p>
+					<p>Founder<%=link_to 'View Biography', user_aboutus_maggie_path%></p>
 				</div>	
 			</div>
 		</div>
@@ -111,7 +104,7 @@ div.transbox p {
 				<div class="ch-info-front ch-img-3"></div>
 				<div class="ch-info-back">
 					<h3>Abdelrahman ElZamzamy </h3>
-					<p>Founder<a href="">View Biography</a></p>
+					<p>Founder <%=link_to 'View Biography', user_aboutus_zamzamy_path%></p>
 				</div>	
 			</div>
 		</div>
@@ -124,7 +117,7 @@ div.transbox p {
 				<div class="ch-info-front ch-img-3"></div>
 				<div class="ch-info-back">
 					<h3>Youmna Salah</h3>
-					<p>Founder <a href="">View Biography</a></p>
+					<p>Founder <%=link_to 'View Biography', user_aboutus_youmna_path%></p>
 				</div>	
 			</div>
 		</div>
@@ -137,7 +130,7 @@ div.transbox p {
 				<div class="ch-info-front ch-img-3"></div>
 				<div class="ch-info-back">
 					<h3>Amir Maurice</h3>
-					<p>Founder<a href="">View Biography</a></p>
+					<p>Founder <%=link_to 'View Biography', user_aboutus_amir_path%></p>
 				</div>	
 			</div>
 		</div>
@@ -150,7 +143,7 @@ div.transbox p {
 				<div class="ch-info-front ch-img-3"></div>
 				<div class="ch-info-back">
 					<h3>Ahmad Abdulraheem</h3>
-					<p>Founder<a href="">View Biography</a></p>
+					<p>Founder <%=link_to 'View Biography', user_aboutus_abdulreheem_path%></p>
 				</div>	
 			</div>
 		</div>
@@ -163,7 +156,7 @@ div.transbox p {
 				<div class="ch-info-front ch-img-3"></div>
 				<div class="ch-info-back">
 					<h3>Dalia Maarek</h3>
-					<p>Founder<a href="">View Biography</a></p>
+					<p>Founder <%=link_to 'View Biography', user_aboutus_dalia_path%></p>
 				</div>	
 			</div>
 		</div>

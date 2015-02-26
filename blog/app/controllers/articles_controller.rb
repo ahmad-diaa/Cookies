@@ -3,20 +3,24 @@ class ArticlesController < ApplicationController
 		@user = User.find(params[:user_id])
     	@articles = Article.order(id: :desc) 
     end
+   
 
 	def show
 		@user = User.find(params[:user_id])
 		@article = Article.find(params[:id])
+	end
+	def sortedarticles
+		@user = User.find(params[:user_id])
+		@articles = Article.all.order(:category_id)
 	end
 
 	def new
 		@user = User.find(params[:user_id])
 		@article = Article.new
 	end
-
-	def edit
+def edit
 		@user = User.find(params[:user_id])
-		@article = Article.find(params[:id])
+		@article = Article.find(params[:article_id])
 	end
 
 	def create
@@ -45,6 +49,10 @@ class ArticlesController < ApplicationController
   		@article.destroy
  
   		redirect_to user_articles_path
+	end
+	def sortedarticles
+		@user = User.find(params[:user_id])
+		@articles = Article.all.order(:category_id)
 	end
 	private 
 		def article_params

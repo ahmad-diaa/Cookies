@@ -1,7 +1,9 @@
+ <div id="boxComments">
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+<h9>
+  <%= comment.commenter %> </h9>
+ <br> 
+ </p>
  
 <p>
   <strong>Comment:</strong>
@@ -9,7 +11,7 @@
   </p>
  
  <p>
-  <%= link_to 'Delete Comment', [comment.article, comment],
+  <%= link_to 'Delete Comment', [@user, comment.article, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>

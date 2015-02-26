@@ -24,7 +24,7 @@
 
   <ul  class="nav nav-tabs" role="tablist">
     <li><a href="#">Take A Tour</a></li>
-    <li><%= link_to 'Blog', user_articles_path %> </li>
+    <li><%= link_to 'Blog', user_articles_path(@user) %> </li>
     <li><a href="#">The Team</a></li>
     <li><a href="#">About Us </a></li>
 
@@ -33,24 +33,29 @@
 
 </div>
 
-<div class="showpost">
-<p>
-  <h2><font color="DodgerBlue"><%= @article.title %></font></h2>
-</p>
-<p>
-<%= render inline:@article.text %>
-</p>
+<div class="showpost" style="position:center;">
+
+  <p>
+    <font size="10px" color="DodgerBlue"><%= @article.title %></font>
+  </p>
+  <p>
+    <%= render inline:@article.text %>
+  </p>
+
 </div>
+
 <div class="show comments">
 <p>
-
-<%= render @article.comments %>
+ <%= render @article.comments %>
 </p>
+</div>
+
+<div class = "Write a Comment" style="position:center; width:100%;">
 <%= form_for([@user ,  @article , @article.comments.build]) do |f| %>
 
   <p><font color="DodgerBlue" >
   <%= @user.name %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :maxlength=>"100", :id=>"comment" %>
   </font></p>
   <p>
   <%= f.hidden_field :commenter, :value => @user.name %>

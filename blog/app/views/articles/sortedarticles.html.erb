@@ -1,4 +1,4 @@
-
+ 
 <!-- <h2>Listing Articles</h2> -->
 <head>
   <meta charset="utf-8"> </meta>
@@ -8,40 +8,44 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
 </head>
-<body id ="ground">
+<body>
 <div class="container">
 
   <ul class="nav nav-tabs" role="tablist">
-    <li ><a href="#">Home</a></li>
-    <li class="active"><%= link_to 'Blog' , user_articles_path %></li>
+    <li class="active"><a href="#">Home</a></li>
+    <li><%= link_to 'Blog' , articles_path %></li>
     
-<li><%= link_to 'About Us',  user_aboutus_intro_path(@user) %></li>
+<li><%= link_to 'About Us', user_aboutus_intro_path %></li>
   </ul>
 </div>
 
 <div class ="container">
   <img src="/images/logo_6_ccc.png" width="700px" style="position:center; margin-left:220px;" >
+
 </div>
 
- <%=link_to 'List by category', user_articles_sortedarticles_path, class: 'btn btn btn-primary btn-lg'%>
-<%=link_to 'New Post',  new_user_article_path, class: 'btn btn-success btn-lg'%><br>
+ <div  class="container" style=" left:520px; top:400px;">
 
+<%=link_to 'Go Back', user_articles_path, class: 'btn btn btn-primary btn-lg'%>
+    
+</div>
 
-  <% @articles.each  do |article| %>
-  <div>
-  <div id ="box" style="margin:50px;">
+<div class="container" style=" left:700px; top:400px; " >
+<%=link_to 'New Post', new_user_article_path, class: 'btn btn-success btn-lg'%>
+     
+</div><br>
 
-      <h9><%= article.title %></h9> 
-       <font align="center">
-       <p> Category : <%= Category.find(article.category_id).name %></p> 
+ 
+  <% Article.all.order(:category_id).each do |article| %>
+    
+  <div id='box'>
+
+      <h4><%= article.title %></h4>
+       <p>Category : <%= Category.find(article.category_id).name %></p> 
       <h4><%= link_to 'Show', user_article_path(@user,article) %> |<%= link_to 'Edit', edit_user_article_path(@user,article) %> | <%= link_to 'Delete', user_article_path(@user,article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></h4>
-      </font>
+
     </div>
-    
- <% end %>
-</body>
 
- 
-
+ <% end -%>
