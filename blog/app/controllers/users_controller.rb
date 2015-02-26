@@ -23,15 +23,14 @@ end
   
 
   def edit
- @user = User.find(params[:id])
-     
-      @user.save
+    @user = User.find(params[:id])
+    @user.update_attribute(:signature, params[:text1])
+    @user.save
   end
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :signature)
   end
 end
-
 
