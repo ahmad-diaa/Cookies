@@ -26,8 +26,7 @@
         <li><a href="#">Take A Tour</a></li>
 
     <li><a href="#">My Profile</a></li>
-    <li><%= link_to 'Blog' , articles_path %></li>
-<li><%= link_to 'About Us', aboutus_intro_path %></li>
+    <li><%= link_to 'Blog' , user_articles_path %></li>
 
   </ul>
 
@@ -63,7 +62,7 @@ tinymce.init({
     font_size_style_values: "12px,13px,14px,16px,18px,20px",
 });
 </script>
-<%= form_for :article, url: articles_path do |f| %> 
+<%= form_for :article, url: user_articles_path(@user) do |f| %> 
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -94,5 +93,5 @@ tinymce.init({
   </p>
  
 <% end %>
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back',  user_articles_path(@user) %>
 </body>

@@ -1,4 +1,56 @@
-<h1>Editing Post</h1>
-<%= render 'form' %>
- 
-<%= link_to 'Back', articles_path %>
+
+<!-- <h2>Listing Articles</h2> -->
+<head>
+  <meta charset="utf-8"> </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> </link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body id ="ground">
+<div class="container">
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li ><a href="#">Home</a></li>
+    <li class="active"><%= link_to 'Blog' , user_articles_path %></li>
+    
+<li><%= link_to 'About Us',  user_aboutus_intro_path(@user) %></li>
+  </ul>
+</div>
+
+<div class ="container">
+  <img src="/images/logo_6_ccc.png" width="700px" style="position:center; margin-left:220px;" >
+</div>
+
+
+
+
+     <a href ="/static/sorted_articles">
+  <button type="button" class="btn btn-primary btn-lg">List By Category</button> </a>
+
+
+
+<div>
+
+     <a href ="articles/new">
+
+ <button type="button" class="btn btn-success btn-lg">New Post</button></a>
+  </div><br>
+
+  <% @articles.each do |article| %>
+    
+  <div id ="box" >
+
+      <h4><%= article.title %></h4>
+       <p>Category : <%= Category.find(article.category_id).name %></p> 
+      <h4><%= link_to 'Show', user_article_path(@user,article) %> |<%= link_to 'Edit', edit_user_article_path(@user,article) %> | <%= link_to 'Delete', user_article_path(@user,article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></h4>
+
+    </div>
+
+ <% end %>
+</body>
+
+

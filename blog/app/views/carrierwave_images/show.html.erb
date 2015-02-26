@@ -2,4 +2,4 @@
 <%= image_tag @carrierwave_image.asset.medium.url, class: "img-thumbnail" %>
 
 <%= link_to 'Edit', edit_carrierwave_image_path(@carrierwave_image) %> |
-<%= link_to 'Back', carrierwave_images_path %>
+<%= link_to "Back", {:controller => "users", :action => "show" } %>

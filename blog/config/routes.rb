@@ -20,17 +20,41 @@ get 'users/edit'
   get 'users/edit/:id', to: 'users#edit'
   post 'users/edit/:id', to: 'users#edit'
   patch 'users/edit/:id', to:'users#edit'
-resources :users
+
+  #resources :root do
+
+  
+ 
+get 'articles/edit'
+  get 'users/:user_id/articles/:article_id/edit', to: 'articles#edit'
+    post 'users/:user_id/articles/:article_id/edit', to: 'articles#edit'
+        patch 'users/:user_id/articles/:article_id/edit', to: 'articles#edit'
+
+  
+
     root 'cookies#show'
+
+resources :users do
+  get 'aboutus/intro'
+  get 'aboutus/maggie'
+   get 'aboutus/youmna'
+end
+
+resources :users do
   resources :articles do
-   resources :comments
-  end
+    resources :comments
+  end 
+end
+resources :articles do
+    resources :comments
+  end 
+
   #resources :root do
 
   
  
   get "/:page" => "static#show"
-  #get 'welcome/index'
+  #get 'welcome/index'  #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
