@@ -26,7 +26,6 @@ def edit
 	def create
 		@user = User.find(params[:user_id])
 		@article = Article.new(article_params)
-
 		if @article.save
 			redirect_to user_articles_path
 		else

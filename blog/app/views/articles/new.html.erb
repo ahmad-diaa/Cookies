@@ -24,8 +24,9 @@
 
     <ul class="nav nav-tabs" role="tablist">
        
-        <li ><a href="#">Home</a></li>
-    <li><%= link_to 'Blog' , user_articles_path %></li>
+
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
+     <li><%= link_to 'Blog' , user_articles_path %></li>
     <li><%= link_to 'About Us',  user_aboutus_intro_path%></li>
 
 
@@ -46,7 +47,9 @@
 
 
 <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+
 <script type="text/javascript">
+
 tinymce.init({
     selector: "textarea",
     theme: "modern",
@@ -63,6 +66,7 @@ tinymce.init({
     font_size_style_values: "12px,13px,14px,16px,18px,20px",
 });
 </script>
+ 
 <%= form_for :article, url: user_articles_path(@user) do |f| %> 
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -77,20 +81,25 @@ tinymce.init({
       </ul>
     </div>
   <% end %>
- 
+
  <h3><font color="yellow" face="sans-serif">
     <%= f.label :title %><br></font>
   <font color="black" face="sans-serif"><%= f.text_field :title %>
   </font></h3>
- 
+ <%= simple_format(h @article.text) %>
+<% if @user.signature.blank? == true%>
+<%= @user.signature = ""%>
+<% end %>
   <h3><font color="yellow">
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area  :text  , :value =>  "<br>_________________________________________<br>"+ @user.signature  %>
   </h3>
  <%= f.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @article.category_id }, { class: 'form-control' }) %>
 
   <p>
-    <%= f.submit %>
+
+
+    <%= f.submit 'submit' %>
   </p>
  
 <% end %>
