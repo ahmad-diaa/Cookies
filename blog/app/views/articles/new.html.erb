@@ -49,6 +49,7 @@
 <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 
 <script type="text/javascript">
+tinymce.execCommand('mceAddControl',true,'editor_id');
 
 tinymce.init({
     selector: "textarea",
@@ -96,9 +97,11 @@ tinymce.init({
   </h3>
  <%= f.collection_select(:category_id, Category.all, :id, :name, { :prompt => 'Select a Category', :selected => @article.category_id }, { class: 'form-control' }) %>
 
+
+  <% if @article.category_id.blank? == true %>
+    <%= @article.category_id = 1 %>
+ <% end %>
   <p>
-
-
     <%= f.submit 'submit' %>
   </p>
  

@@ -15,4 +15,6 @@ class AboutusController < ApplicationController
   end
   def amir
   end
+  def aboutusnouser
+  end
 end

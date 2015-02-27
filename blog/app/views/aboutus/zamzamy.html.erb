@@ -36,17 +36,30 @@ div.transbox p {
 }
 </style>
 
-<div class="container">
 
+
+
+    <% if params[:user_id].blank? == false%>
+
+<div class="container">
   <ul class="nav nav-tabs" role="tablist">
 
-    <li><a href="#">Home</a></li>
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
     <li><%= link_to 'Blog' , user_articles_path %></li>
 <li class="active"><%= link_to 'About Us', user_aboutus_intro_path %></li>
   </ul>
 </div>
+  <%else%>
+<div class="container">
 
+  <ul class="nav nav-tabs" role="tablist">
 
+ <li><%= link_to 'Home' , cookies_show_path %></li>  
+   <li><%= link_to 'Blog' , articles_indexnouser_path %></li>
+<li class="active"><a href="#">About us</a></li>
+  </ul>
+  </div>
+  <%end%>
 <div class ="container">
 
  <img src="/images/logo_6_ccc.png" width="150px" style="position:center; margin-left:950px;" >
@@ -63,7 +76,7 @@ div.transbox p {
 <h2 class="zam" >
 <font color="yellow" face="Cursive" >Abdelrahman ElZamzamy's Biography </font></h2>
 
-<p class="diaaBio" >Abdelrahman ElZamzamy is a 3rd Computer Science and Engineering student whose expected to graduate in 2017. He's passionate over many things as much as he's passionate for computer science; he's a sports enthausiast, he plays for the college team of American Football. Abdelrahman and his team are aiming to create something that would add more joy and comfort to people's lives through their startup Company.</p>
+<p class="diaaBio" >Abdelrahman ElZamzamy is a 3rd Computer Science and Engineering student who is expected to graduate in 2017. He's passionate over many things as much as he's passionate for computer science; he's a sports enthausiast, he plays for the college team of American Football. Abdelrahman and his team are aiming to create something that would add more joy and comfort to people's lives through their startup Company.</p>
 </div>
 
 </head>

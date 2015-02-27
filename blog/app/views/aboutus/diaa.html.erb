@@ -35,16 +35,28 @@ div.transbox p {
 }
 </style>
 
-<div class="container">
 
+    <% if params[:user_id].blank? == false%>
+
+<div class="container">
   <ul class="nav nav-tabs" role="tablist">
 
-    <li><a href="#">Home</a></li>
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
     <li><%= link_to 'Blog' , user_articles_path %></li>
 <li class="active"><%= link_to 'About Us', user_aboutus_intro_path %></li>
   </ul>
 </div>
+  <%else%>
+<div class="container">
 
+  <ul class="nav nav-tabs" role="tablist">
+
+ <li><%= link_to 'Home' , cookies_show_path %></li>  
+   <li><%= link_to 'Blog' , articles_indexnouser_path %></li>
+<li class="active"><%= link_to 'About Us', aboutus_intro_path %></li>
+  </ul>
+  </div>
+  <%end%>
 
 <div class ="container">
 
@@ -62,7 +74,7 @@ div.transbox p {
 <h2 class="diaas" >
 <font color="yellow" face="Cursive" > Ahmed Diaa's <font face="Cursive" >Biography </font></h2>
 
-<p class="diaaBio" >Ahmed Diaa is hobba hobba graduated from la la la he's currently<br> studying tatata enginenen in cairo, he's a very good ATMer </p>
+<p class="diaaBio" >Ahmed diaa is a 6th semester Computer Science student in the German University in Cairo. He is an energetic student, proficient in well performing duties efficiently. He has participated in the ACM Arab Collegiate Programming Contest (ACPC) Regionals 2013 and 2014. Through competitive programming, Ahmed Diaa has gained passion for solving hard problems efficiently.Like any of the team members, he is looking forward to develop his skills and gain new experiences. </p>
 </div>
 
 </head>

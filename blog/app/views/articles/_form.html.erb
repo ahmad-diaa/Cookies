@@ -35,6 +35,8 @@
 
 <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
+tinymce.execCommand('mceAddControl',true,'editor_id');
+
 tinymce.init({
     selector: "textarea",
     theme: "modern",

@@ -13,7 +13,8 @@
 
   <ul class="nav nav-tabs" role="tablist">
 
- <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>      <li><%= link_to 'Blog' , articles_path %></li>
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>      
+ <li><%= link_to 'Blog' , articles_path %></li>
     
 <li><%= link_to 'About Us', user_aboutus_intro_path %></li>
   </ul>
@@ -26,7 +27,7 @@
 
  <div  class="container" style=" left:520px; top:400px;">
 
-<%=link_to 'Go Back', user_articles_path, class: 'btn btn btn-primary btn-lg'%>
+<%=link_to 'Most Recent', user_articles_path, class: 'btn btn btn-primary btn-lg'%>
     
 </div>
 

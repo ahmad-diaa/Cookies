@@ -13,19 +13,19 @@
 
   <ul class="nav nav-tabs" role="tablist">
   
- <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
-    <li class="active"><%= link_to 'Blog' , user_articles_path %></li>
+ <li><%= link_to 'Home' , cookies_show_path %></li>  
+    <li class="active"><%= link_to 'Blog' , articles_indexnouser_path %></li>
     
-<li><%= link_to 'About Us',  user_aboutus_intro_path(@user) %></li>
+<li><%= link_to 'About Us',  aboutus_aboutusnouser_path %></li>
   </ul>
 </div>
-
+<p><font color="white">Some feautures were blocked as you are not a user. Please login if you have an account or sign up if not!</font></p>
 <div class ="container">
   <img src="/images/logo_6_ccc.png" width="700px" style="position:center; margin-left:220px;" >
 </div>
 
- <%=link_to 'List by category', user_articles_sortedarticles_path, class: 'btn btn btn-primary btn-lg'%>
-<%=link_to 'New Post',  new_user_article_path, class: 'btn btn-success btn-lg'%><br>
+
+
 
 
   <% @articles.each  do |article| %>
@@ -35,10 +35,7 @@
       <h9><%= article.title %></h9> 
        <font align="center">
        <p> Category : <%= Category.find(article.category_id).name %></p> 
-      <h4><%= link_to 'Show', user_article_path(@user,article) %> |
-      <%= link_to 'Edit', edit_user_article_path(@user,article) %> | <%= link_to 'Delete', user_article_path(@user,article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></h4>
+      <h4><%= link_to 'Show', articles_shownouser_path(article) %></h4>
       </font>
     </div>
     

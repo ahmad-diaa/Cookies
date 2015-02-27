@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
+  get 'aboutus/diaa'
+ get 'aboutus/dalia'
+ get 'aboutus/amir'
+ get 'aboutus/maggie'
+ get 'aboutus/youmna'
+ get 'aboutus/zamzamy'
+ resources :categories
+ get 'categories/show'
+
+
+
   get 'static/sorted_articles'
-get 'cookies/show'
+  get 'cookies/show'
   get 'aboutus/intro'
 resources :carrierwave_images
 get 'users/edit'
@@ -19,7 +30,10 @@ get 'users/edit'
   get 'users/edit/:id', to: 'users#edit'
   post 'users/edit/:id', to: 'users#edit'
   patch 'users/edit/:id', to:'users#edit'
-  
+  get 'articles/indexnouser'
+  get 'articles/shownouser'
+  get 'articles/:id', to:'articles#shownouser'
+  get 'aboutus/aboutusnouser'
   get 'articles/edit'
   get 'users/:user_id/articles/:article_id/edit', to: 'articles#edit'
     post 'users/:user_id/articles/:article_id/edit', to: 'articles#edit'
@@ -28,6 +42,8 @@ get 'users/edit'
   
 
     root 'cookies#show'
+    
+
 
 resources :users do
   get 'aboutus/intro'
