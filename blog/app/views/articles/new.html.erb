@@ -16,6 +16,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
+  <meta charset="utf-8">
+  <title>jQuery UI Dialog - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#dialog" ).dialog();
+  });
+  </script>
+
 </head>
 <body>
 
@@ -70,28 +82,34 @@ tinymce.init({
  
 <%= form_for :article, url: user_articles_path(@user) do |f| %> 
   <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
+    <div id="dialog" title="Basic dialog">
+ 
+    <!-- <div id="error_explanation"> -->
+     <font size ="2"><b>
         <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:
-      </h2>
+</b>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
+    </font>
     </div>
+</div>
+ 
   <% end %>
 
  <h3><font color="yellow" face="sans-serif">
     <%= f.label :title %><br></font>
   <font color="black" face="sans-serif"><%= f.text_field :title %>
   </font></h3>
- <%= simple_format(h @article.text) %>
 <% if @user.signature.blank? == true%>
 <%= @user.signature = ""%>
 <% end %>
   <h3><font color="yellow">
+  <br>
+<br>
     <%= f.label :text %><br>
     <%= f.text_area  :text  , :value =>  "<br>_________________________________________<br>"+ @user.signature  %>
   </h3>

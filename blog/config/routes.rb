@@ -4,6 +4,8 @@ Rails.application.routes.draw do
  get 'aboutus/amir'
  get 'aboutus/maggie'
  get 'aboutus/youmna'
+
+ get 'aboutus/abdulreheem'
  get 'aboutus/zamzamy'
  resources :categories
  get 'categories/show'
