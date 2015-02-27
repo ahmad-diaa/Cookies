@@ -22,7 +22,7 @@
 
     <ul class="nav nav-tabs" role="tablist">
 
-    <li><a href="#">Home</a></li>
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
     <li><%= link_to 'Blog' , user_articles_path(@user) %></li>
 <li><%= link_to 'About Us', user_aboutus_path(@user) %></li>
 

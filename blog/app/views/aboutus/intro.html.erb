@@ -24,8 +24,8 @@ div.transbox p {
 
   <ul class="nav nav-tabs" role="tablist">
 
-    <li><a href="#">Home</a></li>
-    <li><%= link_to 'Blog' , user_articles_path(params[:user_id]) %></li>
+ <li><%= link_to 'Home' , user_path(params[:user_id]) %></li>  
+   <li><%= link_to 'Blog' , user_articles_path(params[:user_id]) %></li>
 <li class="active"><%= link_to 'About Us', user_aboutus_intro_path(params[:user_id]) %></li>
   </ul>
 </div>
