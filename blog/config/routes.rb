@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   get 'static/sorted_articles'
 get 'cookies/show'
   get 'aboutus/intro'
-
 resources :carrierwave_images
 get 'users/edit'
   get 'carrierwave_images/:id/edit' ,  to: 'carrierwave_images#edit'
@@ -40,7 +39,7 @@ resources :users do
        get 'aboutus/dalia'
         get 'aboutus/abdulreheem'
         get 'articles/sortedarticles'
-end
+  end
 
 resources :users do
   resources :articles do

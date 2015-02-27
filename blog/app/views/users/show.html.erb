@@ -10,8 +10,8 @@
  <ul class="nav nav-tabs" role="tablist">
 
  <li class="active"><a href="#">Home</a></li>
-    <li><%= link_to 'Blog' , user_articles_path(@user) %></li>
-<li><%= link_to 'About Us', aboutus_intro_path %></li>
+    <li><%= link_to 'Blog' , user_articles_path(@user)%></li>
+<li><%= link_to 'About Us', user_aboutus_intro_path(@user) %></li>
     <li><%= link_to 'Edit signature', edit_user_path(@user.id) %></li>
 <li><%= link_to "Edit profile picture", {:controller => "carrierwave_images", :action => "edit", :@carrierwave_images => @user.id }%></li>
    </ul>
