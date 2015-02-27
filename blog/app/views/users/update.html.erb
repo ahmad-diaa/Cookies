@@ -14,6 +14,15 @@
 <li><%= link_to 'About Us', user_aboutus_intro_path(params[:id]) %></li>
     <li><%= link_to 'Edit signature', edit_user_path(@user.id) %></li>
 <li> <%= link_to "Edit link picture", {:controller => "users", :action => "update", :@users => @user } %></li>
-   </ul>	
-<h1>Edit Signature</h1>
+   </ul>
+<h1>Edit Profile Picture</h1>
+<div>
+<p> Current Image </p>
+<IMG SRC= <%=@user.url%> class="img-circle" allign="middle" alt="Current Profile picture" width="150" height="100"> </div>
+<div>
 <%= render 'form' %>
+
+	<%= link_to "Back", {:controller => "users", :action => "show" } %>
+	
+</P>
+</div>

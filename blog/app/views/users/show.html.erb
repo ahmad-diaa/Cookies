@@ -13,13 +13,18 @@
  <li><%= link_to 'Home' , user_path(params[:id]) %></li>      <li><%= link_to 'Blog' , user_articles_path(params[:id])%></li>
 <li><%= link_to 'About Us', user_aboutus_intro_path(params[:id]) %></li>
     <li><%= link_to 'Edit signature', edit_user_path(@user.id) %></li>
-<li><%= link_to "Edit profile picture", {:controller => "carrierwave_images", :action => "edit", :@carrierwave_images => @user.id }%></li>
+<li> <%= link_to "Edit link picture", {:controller => "users", :action => "update", :@users => @user } %></li>
    </ul>
 
 </div>
-<div class="container" style="position:fixed;left:600px;top:300px;">
-<font face="Papyrus" size="+1000" color="lightblue" >Hi, <%=@user.name%> :)</font></div>
-
+<div class ="container">
+  <img src="/images/logo_6_ccc.png" width="150px" style="position:left; margin-left:1000px;" >
+<div style="margin-left:500px; margin-top: 20px;">
+<p align="center">
+	<IMG border="400" SRC= <%=@user.url%> class="img-circle"  align="middle" alt="Profile picture" width="200px" height="250px"></div>
+</p>
+<div class="container" style="position:center;margin-left:400px;top:300px;">
+<font size="+1000" color="lightblue" style="text-align:center;" >Welcome  <%=@user.name%> </font></div>
 
 <div class="container" style="position:fixed;left:500px;top:500px;" ><a href ="/carrierwave_images/"@user.id"/edit">
 	

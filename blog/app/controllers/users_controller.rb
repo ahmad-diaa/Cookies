@@ -28,9 +28,21 @@ end
     @user.save
   end
 
+  def urlView
+
+
+  end
+
+  def update
+         @user = User.find(params[:id])
+        @user.update_attribute(:url, params[:text1])
+        @user.save
+      
+  end
+
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :signature)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :signature , :url)
   end
 end
 

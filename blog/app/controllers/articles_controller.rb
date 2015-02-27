@@ -32,8 +32,9 @@ class ArticlesController < ApplicationController
 	def create
 		@user = User.find(params[:user_id])
 		@article = Article.new(article_params)
-		if @article.category_id == nil
-			@article.category_id =1
+		 if @article.category_id == nil
+		 	render 'new'
+		 else
 		if @article.save
 			redirect_to user_articles_path
 		else

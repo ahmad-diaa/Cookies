@@ -25,11 +25,12 @@ class CarrierwaveImagesController < ApplicationController
   # POST /carrierwave_images.json
   def create
     @carrierwave_image = CarrierwaveImage.new(carrierwave_image_params)
-
+   @user = User.find(params[:id])
     respond_to do |format|
       if @carrierwave_image.save
-        format.html { redirect_to @carrierwave_image, notice: 'Carrierwave image was successfully created.' }
-        format.json { render :show, status: :created, location: @carrierwave_image }
+           @user.update_attribute(:url, @carrierwave_image.asset)
+
+        
       else
         format.html { render :new }
         format.json { render json: @carrierwave_image.errors, status: :unprocessable_entity }
@@ -44,6 +45,9 @@ class CarrierwaveImagesController < ApplicationController
       if @carrierwave_image.update(carrierwave_image_params)
         format.html { redirect_to @carrierwave_image, notice: 'Carrierwave image was successfully updated.' }
         format.json { render :show, status: :ok, location: @carrierwave_image }
+        @user = User.find(params[:id])
+        @user.update_attribute(:url, params(carrierwave_image_params))
+        @user.save
       else
         format.html { render :edit }
         format.json { render json: @carrierwave_image.errors, status: :unprocessable_entity }
