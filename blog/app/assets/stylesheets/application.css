@@ -641,6 +641,20 @@ font-size:17px;
   font-size: 23px;
   color:#FFFF00;
 }
+
+.vision2{
+  position:absolute;
+  text-align: center;
+  top:100px;
+  left:1150px;
+  font-family: sans-serif;
+  font-style: italic bold;
+  font-size: 23px;
+  color:#FFFF00;
+}
+
+
+
 #mission{
 position:absolute;
 top:600px;
@@ -665,6 +679,52 @@ font-size:17px;
   left:145px;
   
 color:yellow;
+}
+
+h2.diaas{
+  position: relative;
+  vertical-align:; center;
+  left:80px;
+}
+
+h2.maggie{
+  position: relative;
+  vertical-align:; center;
+  left:40px;
+}
+
+
+h2.youmna{
+  position: relative;
+  vertical-align: center;
+  left:-10px;
+}
+h2.dalia{
+  position: relative;
+  vertical-align:; center;
+  left:35px;
+}
+
+h2.zam{
+  position: relative;
+  vertical-align: center;
+  left:-100px;
+}
+h2.rheem{
+  position: relative;
+  vertical-align:; center;
+  left:40px;
+}
+
+
+
+.vision2{
+position: relative;
+  left:1000px;
+  top:-10px;
+  color:yellow;
+  font-family: sans-serif;
+  font-style: italic bold;
 }
  
  

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'static/sorted_articles'
 get 'cookies/show'
-  get 'aboutus/intro'
+get 'aboutus/intro'
 
-resources :carrierwave_images
+  resources :carrierwave_images
 get 'users/edit'
   get 'carrierwave_images/:id/edit' ,  to: 'carrierwave_images#edit'
   post 'carrierwave_images/:id/edit' , to: 'carrierwave_images#edit'
